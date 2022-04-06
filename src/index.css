@@ -1,13 +1,47 @@
-body {
+:root {
+  --c0: 255, 255, 255;
+  --c1: 251, 246, 239;
+  --c2: 192, 214, 132;
+  --text: 43, 41, 40;
+}
+
+[data-theme="dark"] {
+  --c0: 43, 41, 40;
+  --c1: 43, 41, 40;
+  --text: 251, 246, 239;
+}
+
+* {
+  line-height: 1.5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: rgb(var(--text));
+  background-color: rgb(var(--c1));
+
+  transition: color background-color .3s;
+}
+
+body, #root, main {
+  min-height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
